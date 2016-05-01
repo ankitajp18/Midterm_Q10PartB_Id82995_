@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  athlete_name: MyString
+  event: MyString
+  country: MyString
+  medal_type: MyString
+  eventdate: 2016-05-01
+
+two:
+  athlete_name: MyString
+  event: MyString
+  country: MyString
+  medal_type: MyString
+  eventdate: 2016-05-01

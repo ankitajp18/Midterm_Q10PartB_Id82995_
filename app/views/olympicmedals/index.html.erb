@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<img alt="Olympic_Rings" src="/assets/olympic_rings.jpg" />
+<h1>Listing Olympicmedals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Athlete name</th>
+      <th>Event</th>
+      <th>Country</th>
+      <th>Medal type</th>
+      <th>Eventdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @olympicmedals.each do |olympicmedal| %>
+      <tr>
+        <td><%= olympicmedal.athlete_name %></td>
+        <td><%= olympicmedal.event %></td>
+        <td><%= olympicmedal.country %></td>
+        <td><%= olympicmedal.medal_type %></td>
+        <td><%= olympicmedal.eventdate %></td>
+        <td><%= link_to 'Show', olympicmedal %></td>
+        <td><%= link_to 'Edit', edit_olympicmedal_path(olympicmedal) %></td>
+        <td><%= link_to 'Destroy', olympicmedal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Olympicmedal', new_olympicmedal_path %>
